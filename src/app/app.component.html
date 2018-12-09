@@ -1,8 +1,9 @@
+<app-header (tabSelected)="showTab($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>I'M WORKING</h2>
-      <button type="button" class="btn btn-primary">click me</button>
+      <app-recipes *ngIf="currentTab=='recipes'"></app-recipes>
+      <app-shopping-list *ngIf="currentTab=='shoppingList'"></app-shopping-list>
     </div>
   </div>
 </div>
